@@ -11,6 +11,7 @@ while(1):
             r.adjust_for_ambient_noise(source2, duration=0.2) 
             audio2 = r.listen(source2) 
             MyText = r.recognize_sphinx(audio2)
+             #MyText = r.recognise_google(audio2) #remove the prev hash for better accuracy but internet is needed
             MyText = MyText.lower() 
             print(MyText)
             SpeakText(MyText)
